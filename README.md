@@ -1,6 +1,4 @@
-![Descrição da imagem](caminho/para/a/imagem.jpg)
-
-
+![Tópico](https://repository-images.githubusercontent.com/659460277/549f15cd-3457-4286-9c81-667f2be80f68)
 
 Bem-vindo ao meu repositório de projetos! Aqui você encontrará uma variedade de projetos que desenvolvi durante meu aprendizado como estudante de programação. Esses projetos abrangem diversas áreas e linguagens de programação, demonstrando minhas habilidades e meu progresso ao longo do tempo.
 
