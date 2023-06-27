@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-// Each person has two parents and two alleles
+// Cada pessoa tem dois pais e dois alelos
 typedef struct person
 {
     struct person *parents[2];
@@ -23,78 +23,77 @@ char random_allele();
 
 int main(void)
 {
-    // Seed random number generator
+    // Gerador de números aleatórios de sementes
     srand(time(0));
 
-    // Create a new family with three generations
+    // Criar uma nova família com três gerações
     person *p = create_family(GENERATIONS);
 
-    // Print family tree of blood types
+    // Imprima a árvore genealógica dos tipos sanguíneos
     print_family(p, 0);
 
-    // Free memory
     free_family(p);
 }
 
-// Create a new individual with `generations`
+// Crie um novo indivíduo com `gerações`
 person *create_family(int generations)
 {
-    // TODO: Allocate memory for new person
+    // Alocar memória para nova pessoa
     person *p = malloc(sizeof(person));
 
-    // If there are still generations left to create
+    // Se ainda restam gerações para criar
     if (generations > 1)
     {
-        // Create two new parents for current person by recursively calling create_family
+        // Crie dois novos pais para a pessoa atual chamando recursivamente create_family
         person *parent0 = create_family(generations - 1);
         person *parent1 = create_family(generations - 1);
 
-        // TODO: Set parent pointers for current person
+        // Definir ponteiros dos pais para a pessoa atual
+
         p->parents[0] = create_family(generations - 1);
         p->parents[1] = create_family(generations - 1);
 
-        // TODO: Randomly assign current person's alleles based on the alleles of their parents
+        // Atribua aleatoriamente os alelos da pessoa atual com base nos alelos de seus pais
         p->alleles[0] = p->parents[0]->alleles[rand() % 2];
         p->alleles[1] = p->parents[1]->alleles[rand() % 2];
 
     }
 
-    // If there are no generations left to create
+    // Se não houver gerações para criar
     else
     {
-        // TODO: Set parent pointers to NULL
+        // Definir ponteiros pai para NULL
         p->parents[0] = NULL;
         p->parents[1] = NULL;
 
-        // TODO: Randomly assign alleles
+        // Atribuir alelos aleatoriamente
         p->alleles[0] = random_allele();
         p->alleles[1] = random_allele();
 
     }
 
-    // TODO: Return newly created person
+    // Retornar pessoa recém-criada
     return p;
 }
 
-// Free `p` and all ancestors of `p`.
+// Livre `p` e todos os ancestrais de `p`.
 void free_family(person *p)
 {
-    // TODO: Handle base case
+    // Lidar com caixa básica
     if (p == NULL)
     {
         return;
     }
 
-    // TODO: Free parents recursively
+    // Pais livres recursivamente
     free_family(p->parents[0]);
     free_family(p->parents[1]);
 
-    // TODO: Free child
     free(p);
 
 }
 
-// Print each family member and their alleles.
+// Imprima cada membro da família e seus alelos.
 void print_family(person *p, int generation)
 {
     // Handle base case
