@@ -96,7 +96,7 @@ void free_family(person *p)
 // Imprima cada membro da família e seus alelos.
 void print_family(person *p, int generation)
 {
-    // Handle base case
+    // Lidar com caixa básica
     if (p == NULL)
     {
         return;
@@ -126,12 +126,12 @@ void print_family(person *p, int generation)
         printf("Grandparent (Generation %i): blood type %c%c\n", generation, p->alleles[0], p->alleles[1]);
     }
 
-    // Print parents of current generation
+    // Print pais da atual geração
     print_family(p->parents[0], generation + 1);
     print_family(p->parents[1], generation + 1);
 }
 
-// Randomly chooses a blood type allele.
+// Escolhe aleatoriamente um alelo de tipo sanguíneo.
 char random_allele()
 {
     int r = rand() % 3;
