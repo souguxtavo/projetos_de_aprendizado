@@ -1,4 +1,6 @@
-# Portfólio de Projetos - Estudante de Programação
+
+
+
 Bem-vindo ao meu repositório de projetos! Aqui você encontrará uma variedade de projetos que desenvolvi durante meu aprendizado como estudante de programação. Esses projetos abrangem diversas áreas e linguagens de programação, demonstrando minhas habilidades e meu progresso ao longo do tempo.
 
 ## Projetos
