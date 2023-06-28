@@ -10,10 +10,10 @@ Aqui estão alguns dos projetos em destaque neste repositório:
 - Linguagem: C
 - Arquivos: herança.c
 
-### 2. Simulação da herança genética de tipos sanguíneos
-- Este código simula a herança genética do tipo sanguíneo em uma árvore genealógica. A simulação cria uma família com várias gerações e atribui aleatoriamente os alelos de tipo sanguíneo com base nos alelos dos pais.
+### 2. Recuperação de Arquivos JPEG
+- Este programa foi desenvolvido para recuperar imagens JPEG de um cartão de memória ou de uma imagem de disco. Ele utiliza técnicas de escavação de arquivos para identificar e extrair arquivos JPEG com base em seus cabeçalhos e rodapés.
 - Linguagem: C
-- Arquivos: herança.c
+- Arquivos: recuperar.c
 
 ### 3. Análise de Avaliações de Filmes
 - Este é um script Python que realiza uma análise de avaliações de filmes usando o Pandas. O objetivo é permitir ao usuário buscar filmes por título ou gênero e obter informações sobre a média de notas e quantidade de avaliações para os filmes correspondentes.
